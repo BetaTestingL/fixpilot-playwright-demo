@@ -5,3 +5,9 @@ test('homepage loads', async ({ page }) => {
 
   await expect(page).toHaveTitle(/Example/);
 });
+
+test("homepage loads", async ({ page }) => {
+  await page.goto("https://google.com");
+
+  await expect(page).toHaveTitle("Facebook");
+});
